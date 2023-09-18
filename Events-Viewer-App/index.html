@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Page header-->
+    <head>
+        <!--meta tag specifying character encoding type-->
+        <meta charset="UTF-8">
+        <!--Page title-->
+        <title>Event Viewer</title>
+        <!--css style sheet link-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--link to the javascript file-->
+        <script src="getAjaxData.js" defer></script>
+    </head>
+    <!--Page body-->
+    <!--onload function makes ajax request to populate page-->
+    <body onload="getAllData()">
+        <div class="grid-container">
+            <!--Page Heading-->
+            <div id="header">
+                <h1>Local Events</h1>
+                <!--Sub heading for list of events-->
+                <h2>Upcoming Events</h2>
+                <!--Home button, hidden at first, calls the getEvents Fucntion same as body onload-->
+                <button id="home_button" onclick="getAllData()">Home</button>
+            </div>
+            <!--Div for list containing all local events-->
+            <div id="events_list"></div>
+            <!--Div for details-->
+            <div id="details_section"></div>
+            <!--Div for the update and check weather buttons-->
+            <div id="update_and_weather">
+                <!--button for updating data of selected event-->
+                <!--Button for displaying weather of the selected item-->
+                <button id="weather_button" onclick="fetchWeather()">Check Weather</button>
+                <button id="update_button" onclick="updateNotes()">Update Event</button>
+            </div>
+            <!--Div for the update request elements-->
+            <div id="editing_area">
+                <!--Textbox input for updating the notes of an event-->
+                <textarea id="updateInput" placeholder="Type change to notes here and click Save Updates" required="true"></textarea>
+                <button id="send_updatedText" onclick="updateDatabase()">Save Updates</button>
+                <button id="clear_button" onclick="clearTextArea()">Clear</button>
+            </div>
+            <!--Div contianing all the weather deatils from openweather api-->
+            <div id="weather_div"></div>
+        </div>
+    </body>
+</html>

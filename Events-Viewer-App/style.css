@@ -1,0 +1,145 @@
+/*setting the width and background colour of the page */
+html {
+    width: 100%;
+    background-color: #d8d0d0;
+}
+/*dispalying the divs in the page as a grid and setting the areas */
+.grid-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 80% 20%;
+    grid-template-areas: 
+        "header header"
+        "list details"
+        "list weather"
+}
+/*The header grid area */
+#header{
+    grid-area: header;
+}
+/*The events_list grid area */
+#events_list{
+    grid-area: list;
+}
+/*Setting the details_section div font size, text format and colour  */
+#details_section{
+
+    text-align: center;
+    margin-right: 200px;
+    padding-bottom: 0px;
+    color: rgb(182, 81, 22);
+    grid-area: details;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
+    font-weight: bolder;
+
+}
+/*The weather div grid area */
+#weather_div{
+    grid-area: weather;
+    
+}
+/*the weather_heading font as bolder */
+#weather_heading{
+    font-weight: bolder;
+}
+/*Setting list elements position, margins, font size and cursor type */
+li{
+    font-size: 30px;
+    position:relative;
+    margin-left: 200px;
+    cursor: pointer;
+}
+/*on hover event for list elements */
+li:hover{
+    
+    color:blue;
+}
+/*Setting list elements to red and changing font size when clicked */
+li:active{
+    color: red;
+    font-size: 33px;
+}
+/*h1 Header colour*/
+h1{
+    color: rgb(202, 199, 199);
+}
+/* h2 sub heading colour */
+h2{
+    color: rgb(182, 81, 22);;
+}
+/*Header background color, border, margin and align properties */
+#header{
+    background-color: #284868;
+    border-style: double;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+/*Weather div backgound colour border, margin and align properties */
+#weather_div{
+    background-color: #a0d2eb;
+    margin-right: 200px;
+    font-size: 40px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(11, 1, 65);
+
+}
+/* Setting image width and height*/
+#cloud_image{
+    width: 70px;
+    height: 70px;
+}
+/*Sets buttons in editing_area divs colour, radius and size properties */
+#editing_area button{
+    background-color: #2fe47e;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+    
+}
+/*Setting the editing area div elements as inline block */
+#editing_area {
+    display: inline-block;
+}
+/*set the textareas size, border  and colour */
+#editing_area textarea{
+    width: 400px;
+    height:150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: antiquewhite;
+    transition: width 0.6s ease-in-out;
+    
+}
+/* Set the update button color, shape and size*/
+#update_button{
+    background-color:#2fe47e;
+    width:120px;
+    height:50px;
+    margin-left: 200px;
+    border-radius: 10px;
+}
+/* Set the weather buttons colour, size,shape and margin*/
+#weather_button{
+    background-color:#2fe47e;
+    width:120px;
+    height:50px;
+    margin-left: 200px;
+    border-radius: 10px;
+
+}
+/* Set the home buttons colour size and margins*/
+#home_button{
+    background-color: #2fe47e;
+    width:120px;
+    height:50px;
+    margin-right: 100%;
+    border-radius: 10px;
+}
+/* Set the update_weather div elements to inline block*/
+#update_and_weather {
+    display: inline-blocks;
+}
